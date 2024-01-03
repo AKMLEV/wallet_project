@@ -1,27 +1,24 @@
 //відповідає за роботу Renderer та ListenerManager
 
-class WalletUI{
+class WalletUI {
+	constructor(app, listenerManager, renderer) {
+		this.app = app;
+		this.listenerManager = listenerManager;
+		this.renderer = renderer;
+	}
 
-    constructor(app,listenerManager,renderer){
-        this.app = app;
-        this.listenerManager = listenerManager;
-        this.renderer =renderer;
+	prepareUI() {
+		this.getRenderer().renderUI();
+		this.getListenerManager().setListeners();
+	}
 
-    }
+	getListenerManager() {
+		return this.listenerManager;
+	}
 
-    prepareUI(){
-        this.getRenderer().renderUI();
-        this.getListenerManager().setListeners()
-    }
-    
-    getListenerManager(){
-        return this.listenerManager;
-    }
-
-    getRenderer(){
-        return this.renderer;
-    }
-
+	getRenderer() {
+		return this.renderer;
+	}
 }
 
 module.exports = WalletUI;

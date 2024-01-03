@@ -1,3 +1,3 @@
 const Application = require("./Application");
-let app = new Application();
+const app = new Application();
 app.prepareUI();
