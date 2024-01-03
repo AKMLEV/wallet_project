@@ -1,4 +1,5 @@
-require("dotenv-webpack").config();
+require("dotenv").config();
+// require("dotenv-webpack").config();
 
 const DEFAULT_CURRENCY = "ETH";
 
