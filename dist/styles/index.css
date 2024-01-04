@@ -1,0 +1,106 @@
+#search{
+    font-size: small;
+    width: 190px;
+}
+
+body {
+    background-image: url('../assets/crypto.jpg');  
+    background-size: 100%;
+    background-position: top;
+  }
+
+.container {
+  width: 100%; 
+  margin: 0 auto; 
+}
+
+#currency_container {
+  background-color: black;
+  color: gold;
+  width: 100px;
+  text-align: center;
+  height: fit-content;
+  border: 2px solid gold;
+  font-size: 25px;
+  }
+
+#user_info_conteiner{
+    background-color: rgba(8, 0, 0, 0.55);
+    color: whitesmoke;
+    text-align: center;
+    height: 28px;
+    border: 2px solid gold;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+ #address_container {
+        border-right: 2px solid gold;
+        padding-right: 5px; 
+      }
+      
+#balance_container {
+        padding-left: 5px; 
+        padding-right: 5px;
+      }
+      
+
+#main {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid gold;
+  }
+
+#send_button {
+  background-color: rgb(22, 20, 141);
+  border: 1px solid gold;
+  color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-top: 5px;
+  transition: background-color 0.3s, color 0.3s; 
+}
+  
+#send_button:hover {
+  background-color: black;
+  color: gold;
+}
+
+#transfer_block {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  background-color: rgba(8, 0, 0, 0.55);
+  border: 2px solid gold;
+
+
+}
+#send_containder {
+  border: 2px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin:0 auto;
+  margin-bottom: 10px;
+  width: 95%;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-color: black;
+  color: gold;
+  border: 2px solid gold;
+  box-sizing: border-box;
+
+}
+
+#Tranfer_title {
+  text-align: center;
+  font-size: 30px;
+  color: gold;
+  margin-top: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+div {
+  box-sizing: border-box;
+}
