@@ -48,31 +48,16 @@ class Application {
 		this.currency = currency;
 	}
 
-	sendCurrency(receiver, amount) {
+	async sendCurrency(receiver, amount) {
 		return this.blockchainService.sendCurrency(receiver, amount);
 	}
 
-	getAddress() {
-		return new Promise(async (resolve, reject) => {
-			try {
-				const result = await this.blockchainService.getAddress();
-				console.log("Application.getAddress", result);
-				return resolve(result);
-			} catch (e) {
-				return reject(e);
-			}
-		});
+	async getAddress() {
+		return this.blockchainService.getAddress();
 	}
 
-	getCurrentBalance() {
-		return new Promise(async (resolve, reject) => {
-			try {
-				const result = await this.blockchainService.getCurrentBalance();
-				return resolve(result);
-			} catch (e) {
-				return reject(e);
-			}
-		});
+	async getCurrentBalance() {
+		return this.blockchainService.getCurrentBalance();
 	}
 }
 

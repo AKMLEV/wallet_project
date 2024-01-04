@@ -1,14 +1,18 @@
-const Validator = require("/src/validators/Validator");
-const staticValidator = new Validator();
+const { Web3 } = require("web3");
+const EthConverter = require("/src/helpers/EthConverter");
+const Validator = require("/src/validators/blockchain/EthValidator");
+const StaticValidator = require("/src/validators/Validator");
+const PROVIDER_URL = process.env.ETH_PROVIDER_URL;
+const staticValidator = new StaticValidator();
 class AbstractCurrencyLib {
-	constructor(app, provider, validator, converter) {
+	constructor(app) {
 		this.app = app;
-		staticValidator.validateObject(provider, "provider");
-		staticValidator.validateObject(validator, "validator");
-		staticValidator.validateObject(converter, "converter");
-		this.provider = provider;
-		this.validator = validator;
-		this.converter = converter;
+		this.provider = new Web3(new Web3.providers.HttpProvider(PROVIDER_URL));
+		this.validator = new Validator();
+		this.converter = new EthConverter();
+		staticValidator.validateObject(this.provider, "provider");
+		staticValidator.validateObject(this.validator, "validator");
+		staticValidator.validateObject(this.converter, "converter");
 	}
 
 	getBlockchainService() {

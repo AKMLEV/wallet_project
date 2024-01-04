@@ -27,12 +27,12 @@ class ListenerManager {
 			.addEventListener("click", async (event) => {
 				const _address = document.getElementById("transfer_address").value;
 				const _amount = document.getElementById("transfer_amount").value;
-				try {
+				// try {
 					const result = await this.app.sendCurrency(_address, _amount);
 					alert(result);
-				} catch (e) {
-					alert(e.message);
-				}
+				// } catch (e) {
+				// 	alert(e.message);
+				// }
 			});
 	}
 }
